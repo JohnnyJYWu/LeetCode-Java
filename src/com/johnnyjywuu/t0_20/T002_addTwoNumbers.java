@@ -1,5 +1,7 @@
 package com.johnnyjywuu.t0_20;
 
+import com.johnnyjywuu.model.ListNode;
+
 /**
  * @author Created by Johnny Wu on 2019/8/13.
  * @title 2. 两数相加
@@ -25,36 +27,27 @@ package com.johnnyjywuu.t0_20;
  */
 
 public class T002_addTwoNumbers {
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode result = new ListNode(0);
-        boolean isCarry = false;// 是否进位
+        boolean isCarry = false; //是否进位
 
         ListNode head = result;
 
         while (l1 != null && l2 != null) {
-            int sum = l1.val + l2.val + (isCarry ? 1 : 0);// （三元表达式）上一位进位则+1，否则+0
-            if (isCarry) isCarry = false;// 进位了则充值isCarry为false
+            int sum = l1.val + l2.val + (isCarry ? 1 : 0); //（三元表达式）上一位进位则+1，否则+0
+            if (isCarry) isCarry = false; //进位了则充值isCarry为false
 
-            if (sum >= 10) {// 相加>10进位
+            if (sum >= 10) { //相加>10进位
                 sum -= 10;
                 isCarry = true;
             }
             head.next = new ListNode(sum);
-            // 链表指针后移
+            //链表指针后移
             l1 = l1.next;
             l2 = l2.next;
             head = head.next;
         }
-        // l1有剩余高位数未加完，继续加进去
+        //l1有剩余高位数未加完，继续加进去
         while (l1 != null) {
             int sum = l1.val;
             if (isCarry) {
@@ -69,7 +62,7 @@ public class T002_addTwoNumbers {
             l1 = l1.next;
             head = head.next;
         }
-        // l2有剩余高位数未加完，继续加进去
+        //l2有剩余高位数未加完，继续加进去
         while (l2 != null) {
             int sum = l2.val;
             if (isCarry) {
@@ -84,7 +77,7 @@ public class T002_addTwoNumbers {
             l2 = l2.next;
             head = head.next;
         }
-        // 若此时isCarry仍为true需要进位，则进1
+        //若此时isCarry仍为true需要进位，则进1
         if (isCarry) {
             head.next = new ListNode(1);
         }

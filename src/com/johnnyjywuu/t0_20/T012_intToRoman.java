@@ -42,14 +42,14 @@ package com.johnnyjywuu.t0_20;
 
 public class T012_intToRoman {
     public String intToRoman(int num) {
-        // 分析：
-        // 1~3单纯为I,II,III,依次添加I
-        // 4为IV
-        // 5为V
-        // 6~8单纯为VI,VII,VIII,理解为5+1~3即可，换算为V+I,V+II,V+III
-        // 9为IX
-        // 10为X
-        // 以后依次类推……最大为3999，因此定义数组作为所有可能出现的罗马数字的标记
+        //分析：
+        //1~3单纯为I,II,III,依次添加I
+        //4为IV
+        //5为V
+        //6~8单纯为VI,VII,VIII,理解为5+1~3即可，换算为V+I,V+II,V+III
+        //9为IX
+        //10为X
+        //以后依次类推……最大为3999，因此定义数组作为所有可能出现的罗马数字的标记
         int[] nums       = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
         String[] rommans = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
         StringBuilder result = new StringBuilder();

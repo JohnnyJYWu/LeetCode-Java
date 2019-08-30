@@ -1,5 +1,7 @@
 package com.johnnyjywuu.t21_40;
 
+import com.johnnyjywuu.model.ListNode;
+
 /**
  * @author Created by Johnny Wu on 2019/8/23.
  * @title 24. 两两交换链表中的节点
@@ -22,23 +24,14 @@ package com.johnnyjywuu.t21_40;
  */
 
 public class T024_swapPairs {
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public ListNode swapPairs(ListNode head) {
-        if (head == null || head.next == null) return head;// 判空
+        if (head == null || head.next == null) return head; //判空
 
         ListNode first = head;
         ListNode second = head.next;
 
-        first.next = swapPairs(second.next);// 翻转，第一个的next指向第二个的next，同时第二个的next调用此方法递归执行，对后面的链表进行翻转
-        second.next = first;// 翻转，第二个的next指向第一个
+        first.next = swapPairs(second.next); //翻转，第一个的next指向第二个的next，同时第二个的next调用此方法递归执行，对后面的链表进行翻转
+        second.next = first; //翻转，第二个的next指向第一个
 
         return second;
     }

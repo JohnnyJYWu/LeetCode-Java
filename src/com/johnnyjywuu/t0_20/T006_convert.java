@@ -32,16 +32,16 @@ public class T006_convert {
         if (numRows <= 1) return s;
 
         StringBuilder result = new StringBuilder();
-        int period = numRows + (numRows - 2);// 每个Z字周期，含头不含尾
+        int period = numRows + (numRows - 2); //每个Z字周期，含头不含尾
 
-        for (int i = 0; i < numRows; i ++) {// 按行打印
-            for (int j = 0; j < s.length(); j += period) {// 周期数
-                int head = i + j;// 每一行对应的周期开头位置
+        for (int i = 0; i < numRows; i ++) { //按行打印
+            for (int j = 0; j < s.length(); j += period) { //周期数
+                int head = i + j; //每一行对应的周期开头位置
                 if (head < s.length()) {
                     result.append(s.charAt(head));
                 }
-                if (i > 0 && i < numRows - 1 // 除去第一行和最后一行，其他行可能含有两个字符
-                && head + (period - 2 * i) < s.length()) {// head + (period - 2 * i)为第二个字符的位置
+                if (i > 0 && i < numRows - 1  //除去第一行和最后一行，其他行可能含有两个字符
+                && head + (period - 2 * i) < s.length()) { //head + (period - 2 * i)为第二个字符的位置
                     result.append(s.charAt(head + (period - 2 * i)));
                 }
             }

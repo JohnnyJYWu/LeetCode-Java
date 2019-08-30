@@ -28,20 +28,20 @@ public class T009_isPalindrome {
         if (x == 0) return true;
         if (x < 0 || x % 10 == 0) return false;
 
-//        // 转换成字符串进行判断
+//        //转换成字符串进行判断
 //        return isPalindrome(x + "");
 
-        // 把后半部分数字反转，与前半部分比较
-        int num = 0;// 后半部分数字，从后往前加
+        //把后半部分数字反转，与前半部分比较
+        int num = 0; //后半部分数字，从后往前加
         while (x > num) {
             num = num * 10 + x % 10;
             x /= 10;
         }
-        // 如果x长度为奇数，会出现num比x多一位的情况
+        //如果x长度为奇数，会出现num比x多一位的情况
         return x == num || x == num / 10;
     }
 
-    // 转换成字符串进行判断，头尾比较即可
+    //转换成字符串进行判断，头尾比较即可
     public boolean isPalindrome(String str) {
         int i = 0, j = str.length() - 1;
 

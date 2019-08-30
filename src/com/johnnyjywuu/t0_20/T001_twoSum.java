@@ -22,12 +22,12 @@ public class T001_twoSum {
         Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
-            map.put(nums[i], i);// 反着放，key为值，value为nums在数组中的位置(index)
+            map.put(nums[i], i); //反着放，key为值，value为nums在数组中的位置(index)
         }
 
         for (int i = 0; i < nums.length; i++) {
             int differ = target - nums[i];
-            if (map.containsKey(differ) && map.get(differ) != i) {// Integer比较时有优化，默认比较值而不是对象地址
+            if (map.containsKey(differ) && map.get(differ) != i) { //Integer比较时有优化，默认比较值而不是对象地址
                 return new int[]{i, map.get(differ)};
             }
         }

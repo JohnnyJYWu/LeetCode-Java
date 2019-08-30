@@ -39,10 +39,10 @@ public class T020_isValid {
 
         for (int i = 0; i < s.length(); i ++) {
             char ch = s.charAt(i);
-            if (ch == '(' || ch == '[' || ch == '{') {// 左括号直接入栈
+            if (ch == '(' || ch == '[' || ch == '{') { //左括号直接入栈
                 stack.push(ch);
             }
-            if (ch == ')' || ch == ']' || ch == '}') {// 右括号则判断栈顶是否为对应左括号，是则出栈顶，否则返回false
+            if (ch == ')' || ch == ']' || ch == '}') { //右括号则判断栈顶是否为对应左括号，是则出栈顶，否则返回false
                 switch (ch) {
                     case ')':
                         if (!stack.isEmpty() && stack.peek() == '(') {
@@ -69,7 +69,7 @@ public class T020_isValid {
             }
         }
 
-        if (!stack.isEmpty()) return false;// 若此时栈不为空，说明还有未配对的括号，返回false
+        if (!stack.isEmpty()) return false; //若此时栈不为空，说明还有未配对的括号，返回false
 
         return true;
     }

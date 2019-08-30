@@ -19,13 +19,13 @@ package com.johnnyjywuu.t0_20;
 public class T011_maxArea {
     public int maxArea(int[] height) {
         int maxArea = 0;
-        // 双指针
+        //双指针
         int left = 0, right = height.length -1;
 
         while (left < right) {
-            int width = Math.min(height[left], height[right]);// 木桶原理
+            int width = Math.min(height[left], height[right]); //木桶原理
             maxArea = Math.max(maxArea, (right - left) * width);
-            if (height[left] <= height[right]) {// 由于宽度由较小的决定（木桶原理），因此保留较长的板，短板指针往长版移动，试图寻找更长的板
+            if (height[left] <= height[right]) { //由于宽度由较小的决定（木桶原理），因此保留较长的板，短板指针往长版移动，试图寻找更长的板
                 left ++;
             } else {
                 right --;

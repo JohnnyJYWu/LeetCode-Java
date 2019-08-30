@@ -41,13 +41,13 @@ package com.johnnyjywuu.t0_20;
 public class T008_myAtoi {
     public int myAtoi(String str) {
         if (str == null) return 0;
-        str = str.trim();// 去除首位空格
-        if (str.length() == 0) return 0;// 有可能全是空格，去除后长度为0，无法执行转换
+        str = str.trim(); //去除首位空格
+        if (str.length() == 0) return 0; //有可能全是空格，去除后长度为0，无法执行转换
         if ((str.charAt(0) < '0' || str.charAt(0) > '9') && str.charAt(0) != '+' && str.charAt(0) != '-') return 0;//开头不是数字或正负号，无法转换
 
         int result = 0;
-        int index = 0;// 位数
-        boolean isNegative = false;// 正负
+        int index = 0; //位数
+        boolean isNegative = false; //正负
         if (str.charAt(0) == '+') {
             index ++;
         } else if (str.charAt(0) == '-') {
@@ -57,7 +57,7 @@ public class T008_myAtoi {
 
         while (index < str.length() && str.charAt(index) >= '0' && str.charAt(index) <= '9') {
             int num = (str.charAt(index) - '0') * (isNegative ? -1 : 1);//正负
-            // 溢出，返回INT_MAX (2^31 − 1) 或 INT_MIN (−2^31)
+            //溢出，返回INT_MAX (2^31 − 1) 或 INT_MIN (−2^31)
             if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && num > 7)) return Integer.MAX_VALUE;
             if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && num < -8)) return Integer.MIN_VALUE;
             result = result * 10 + num;

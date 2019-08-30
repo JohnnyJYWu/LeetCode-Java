@@ -34,7 +34,7 @@ public class T026_removeDuplicates {
     public int removeDuplicates(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
 
-        // 快慢指针
+        //快慢指针
         int index = 1;
         int len = 0;
 

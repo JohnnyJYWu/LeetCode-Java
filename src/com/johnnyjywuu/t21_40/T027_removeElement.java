@@ -36,7 +36,7 @@ public class T027_removeElement {
     public int removeElement(int[] nums, int val) {
         if (nums == null || nums.length == 0) return 0;
 
-        // 快慢指针
+        //快慢指针
         int index = 0;
         int len = 0;
 
@@ -48,6 +48,6 @@ public class T027_removeElement {
             index ++;
         }
 
-        return len;// len已经在循环末尾+1了，所以这里不用再+1
+        return len; //len已经在循环末尾+1了，所以这里不用再+1
     }
 }

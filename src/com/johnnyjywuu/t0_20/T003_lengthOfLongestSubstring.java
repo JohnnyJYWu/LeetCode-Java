@@ -23,14 +23,14 @@ package com.johnnyjywuu.t0_20;
  */
 
 public class T003_lengthOfLongestSubstring {
-    public int lengthOfLongestSubstring(String s) {// 滑动窗口
+    public int lengthOfLongestSubstring(String s) { //滑动窗口
         int result = 0;
-        int[] index = new int[256];// 计数，以每个char字符对应ASCII码作为index数组位置+1，记录字符在字符串s中的位置+1（即该字符的后一个位置）
-        int flag = 0;// flag用于标记发生重复字符在字符串中后一个字符的位置，如abcdeafg，遍历到第二个a时，flag标记第一个a后面的b的位置
-        // 发生重复时，flag可作为滑动窗口的头部重新进行长度计算
+        int[] index = new int[256]; //计数，以每个char字符对应ASCII码作为index数组位置+1，记录字符在字符串s中的位置+1（即该字符的后一个位置）
+        int flag = 0; //flag用于标记发生重复字符在字符串中后一个字符的位置，如abcdeafg，遍历到第二个a时，flag标记第一个a后面的b的位置
+        //发生重复时，flag可作为滑动窗口的头部重新进行长度计算
         for (int i = 0; i < s.length(); i ++) {
             char ch = s.charAt(i);
-            flag = Math.max(flag, index[ch]);// index数组初始化全部为0，若发生重复，重复字符对应的位置不为0，而是该字符在字符串中【上一次出现位置的后一个位置】的值
+            flag = Math.max(flag, index[ch]); //index数组初始化全部为0，若发生重复，重复字符对应的位置不为0，而是该字符在字符串中【上一次出现位置的后一个位置】的值
             result = Math.max(result, i - flag + 1);
             index[ch] = i + 1;
         }

@@ -23,10 +23,10 @@ package com.johnnyjywuu.t21_40;
 public class T028_strStr {
     public int strStr(String haystack, String needle) {
         if (haystack == null || needle == null) return 0;
-        if (needle.length() == 0) return 0;// needle长度为0时要求返回0
-        if (haystack.length() < needle.length()) return -1;// haystack长度 < needle长度，要求返-1
+        if (needle.length() == 0) return 0; //needle长度为0时要求返回0
+        if (haystack.length() < needle.length()) return -1; //haystack长度 < needle长度，要求返-1
 
-        int start = 0, end = needle.length() - 1;// 以needle长度为区间，在haystack中移动该区间进行查找
+        int start = 0, end = needle.length() - 1; //以needle长度为区间，在haystack中移动该区间进行查找
 
         while (end < haystack.length()) {
             if (haystack.substring(start, end + 1).equals(needle)) {

@@ -42,7 +42,7 @@ package com.johnnyjywuu.t0_20;
 
 public class T013_romanToInt {
     public int romanToInt(String s) {
-        // 同上题，只是根据字符串开头不断取数加进去，然后把开头的字符去掉
+        //同上题，只是根据字符串开头不断取数加进去，然后把开头的字符去掉
         int[] nums       = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
         String[] rommans = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 
@@ -50,7 +50,7 @@ public class T013_romanToInt {
         for (int i = 0; i < nums.length; i ++) {
             while (s.startsWith(rommans[i])) {
                 result += nums[i];
-                s = s.substring(rommans[i].length());// 去掉开头代表数字的罗马字符
+                s = s.substring(rommans[i].length()); //去掉开头代表数字的罗马字符
             }
         }
 
