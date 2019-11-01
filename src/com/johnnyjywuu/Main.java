@@ -1,12 +1,6 @@
 package com.johnnyjywuu;
 
 import com.johnnyjywuu.model.ListNode;
-import com.johnnyjywuu.model.TreeNode;
-import com.johnnyjywuu.t101_120.T102_levelOrder;
-import com.johnnyjywuu.t101_120.T103_zigzagLevelOrder;
-import com.johnnyjywuu.t81_100.*;
-
-import java.util.List;
 
 /**
  * @author Created by Johnny Wu on 2019/8/13.
@@ -28,26 +22,41 @@ public class Main {
     }
 
     private static void test101_120() {
-        T102_levelOrder test102 = new T102_levelOrder();
-        List<List<Integer>> result102 = test102.levelOrder(Utils.buildTreeNode(new Integer[] {3, 9, 20, null, null, 15, 7}));
-        System.out.println(result102.toString());
+//        T102_levelOrder test102 = new T102_levelOrder();
+//        List<List<Integer>> result102 = test102.levelOrder(Utils.buildTreeNode(new Integer[] {3, 9, 20, null, null, 15, 7}));
+//        System.out.println(result102.toString());
 
-        T103_zigzagLevelOrder test103 = new T103_zigzagLevelOrder();
-        List<List<Integer>> result103 = test103.zigzagLevelOrder(Utils.buildTreeNode(new Integer[] {3, 9, 20, null, null, 15, 7}));
-        System.out.println(result103.toString());
+//        T103_zigzagLevelOrder test103 = new T103_zigzagLevelOrder();
+//        List<List<Integer>> result103 = test103.zigzagLevelOrder(Utils.buildTreeNode(new Integer[] {3, 9, 20, null, null, 15, 7}));
+//        System.out.println(result103.toString());
 
+//        T112_hasPathSum test112 = new T112_hasPathSum();
+//        boolean result112 = test112.hasPathSum(Utils.buildTreeNode(new Integer[] {5,4,8,11,null,13,4,7,2,null,null,null,1}), 22);
+//        System.out.println(result112);
+
+//        T113_pathSum test113 = new T113_pathSum();
+//        List<List<Integer>> result113 = test113.pathSum(Utils.buildTreeNode(new Integer[] {5,4,8,11,null,13,4,7,2,null,null,null,1}), 22);
+//        System.out.println(result113.toString());
     }
 
     private static void test81_100() {
+//        T082_deleteDuplicates test82 = new T082_deleteDuplicates();
+//        ListNode result82 = test82.deleteDuplicates(Utils.buildListNode(new int[] {1, 1, 2, 3, 3}));
+//        System.out.println(result82.toString());
+
+//        T083_deleteDuplicates test83 = new T083_deleteDuplicates();
+//        ListNode result83 = test83.deleteDuplicates(Utils.buildListNode(new int[] {1, 1, 2, 3, 3}));
+//        System.out.println(result83.toString());
+
 //        T092_reverseBetween test92 = new T092_reverseBetween();
-//        ListNode result = test92.reverseBetween(Utils.buildListNode(new int[] {1, 2, 3, 4, 5}), 2, 4);
-//        System.out.println(result.toString());
-
-
+//        ListNode result92 = test92.reverseBetween(Utils.buildListNode(new int[] {1, 2, 3, 4, 5}), 2, 4);
+//        System.out.println(result92.toString());
     }
 
     private static void test61_80() {
-
+//        T061_rotateRight test61 = new T061_rotateRight();
+//        ListNode resutl61 = test61.rotateRight(Utils.buildListNode(new int[] {1, 2}), 1);
+//        System.out.println(resutl61.toString());
     }
 
     private static void test41_60() {

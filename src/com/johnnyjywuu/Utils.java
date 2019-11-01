@@ -13,7 +13,7 @@ import sun.rmi.runtime.Log;
 
 public class Utils {
     /**
-     * 构建普通链表 ListNode
+     * 构建单向链表 ListNode
      * @param nodeVals
      * @return ListNode head
      */
@@ -34,7 +34,7 @@ public class Utils {
     }
 
     /**
-     * 构建普通二叉树 TreeNode
+     * 构建二叉树 TreeNode
      * @param nodeVals
      * @return TreeNode root
      */
