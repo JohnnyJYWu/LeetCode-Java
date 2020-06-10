@@ -1,6 +1,8 @@
 package com.johnnyjywuu;
 
-import com.johnnyjywuu.model.ListNode;
+import java.io.File;
+import java.util.Arrays;
+import java.util.regex.Pattern;
 
 /**
  * @author Created by Johnny Wu on 2019/8/13.
@@ -19,6 +21,10 @@ public class Main {
         test61_80();
         test81_100();
         test101_120();
+
+        System.out.println(Utils.replaceAccessTokenReg(Utils.test.toLowerCase(), "__down_x__", "" + 720));
+
+//        ClientManager.getInstance().startServer();
     }
 
     private static void test101_120() {
